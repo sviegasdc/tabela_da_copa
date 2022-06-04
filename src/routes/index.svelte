@@ -51,10 +51,23 @@
 		align-items: center;
 		/* border: 1px solid red; */
 	}
+	.links{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		height: fit-content;
+	}
     .links a{
         color:white;
         text-decoration: none;
         font-size: 50px;
-        display:flexbox;
+		margin: 20px;
+        
     }
+	@media (max-width: 768px){
+		.show-games{
+			flex-direction: column;
+		}
+	}
 </style>
