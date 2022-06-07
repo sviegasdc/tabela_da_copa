@@ -1,22 +1,28 @@
 <script>
 	import GameCard from '$lib/GameCard.svelte';
+	import MenuHamburger from '$lib/MenuHamburger.svelte';
 	import '/src/app.css';
 	let jogos = ['', '', ''];
+	let isOpen = false;
 </script>
 
 <div class="main">
+
+	<div class="menu">
+		<MenuHamburger/>
+	</div>
 	<div class="logo">
 		<img
 			src="https://www.qatar2022.qa/themes/custom/sc/dist/img/svg/qatar-hero-shadow.svg"
 			alt="Logo do Qatar"
-            width="250px"
-            height="250px"
+			width="250px"
+			height="250px"
 		/>
 	</div>
-    <div class="links">
-        <a href="/">Fase de Grupos</a>
-        <a href="/">Fase Final</a>
-    </div>
+	<div class="links">
+		<a href="/" style="margin-right:150px">Fase de Grupos</a>
+		<a href="/" style="margin-right: 150px;">Fase Final</a>
+	</div>
 	<div class="show-games">
 		{#each jogos as jogo}
 			<GameCard />
@@ -43,7 +49,7 @@
 		overflow: auto;
 	}
 	.logo {
-		height: 150px;
+		height: 100px;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: nowrap;
@@ -51,22 +57,23 @@
 		align-items: center;
 		/* border: 1px solid red; */
 	}
-	.links{
+	.links {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
 		height: fit-content;
 	}
-    .links a{
-        color:white;
-        text-decoration: none;
-        font-size: 50px;
-		margin: 20px;
-        
-    }
-	@media (max-width: 768px){
-		.show-games{
+	.links a {
+		color: white;
+		text-decoration: none;
+		font-size: 50px;
+		/*top e bottom -  left e right*/
+		margin: 20px 50px;
+	}
+	/* media queary */
+	@media (max-width: 768px) {
+		.show-games {
 			flex-direction: column;
 		}
 	}

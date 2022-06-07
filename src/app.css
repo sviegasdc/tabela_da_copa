@@ -1,7 +1,24 @@
+/* fontes das logos do qatar */
+
+@font-face {
+    font-family: 'GraphikArabic';
+    src: url('../static/Qatar2022/Qatar2022/GraphikArabicMedium.otf');
+}
+
+@font-face {
+    font-family: 'ArabicBold';
+    src: url('../static/Qatar2022/Qatar2022/Qatar2022Arabic-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'ArabicHeavy';
+    src: url('../static/Qatar2022/Qatar2022/Qatar2022Arabic-Heavy.ttf');
+}
+
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: GraphikArabic;
 }
 
 html {
