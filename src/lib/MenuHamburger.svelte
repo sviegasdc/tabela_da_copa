@@ -40,7 +40,7 @@
 		{ name: 'Portugal' },
 		{ name: 'Gana' },
 		{ name: 'Uruguai' },
-		{ name: 'Coreia do Sul}' }
+		{ name: 'Coreia do Sul' }
 	];
 </script>
 
