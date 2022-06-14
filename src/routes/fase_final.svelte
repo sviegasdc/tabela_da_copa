@@ -1,5 +1,7 @@
 <script>
     import '/src/app.css';
+	import TeamCard from '$lib/TeamCard.svelte'
+	let games = ['','','']
 </script>
 <div class="main">
 	<div class="logo">
@@ -10,7 +12,11 @@
 			height="250px"
 		/>
 	</div>
-	<h1>WIP</h1>
+	<div class="game-tree">
+		{#each games as game}
+			<TeamCard/>
+		{/each}
+	</div>
 </div>
 
 <style>
