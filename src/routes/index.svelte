@@ -20,8 +20,8 @@
 		/>
 	</div>
 	<div class="links">
-		<a href="/" style="margin-right:150px">Fase de Grupos</a>
-		<a href="/" style="margin-right: 150px;">Fase Final</a>
+		<a href="/fase_de_grupos" style="margin-right:150px">Fase de Grupos</a>
+		<a href="/fase_final" style="margin-right: 150px;">Fase Final</a>
 	</div>
 	<div class="show-games">
 		{#each jogos as jogo}
