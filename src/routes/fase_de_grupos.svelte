@@ -52,12 +52,28 @@
 </script>
 
 <div class="main">
+	<div class="btn-container">
+		<a
+			href="./"
+			style="text-decoration: none; color: white;width: fit-content;"
+		>
+			<img
+				src="https://raw.githubusercontent.com/ArnoldSGR/icons_tabela_da_copa/main/btn-voltar.svg"
+				alt="Voltar"
+				width="70px"
+				height="70px"
+			/>
+			<span style="position: relative; z-index: 2; bottom:32px; right:44px;font-size: 12px;"
+				>Voltar</span
+			>
+		</a>
+	</div>
 	<div class="logo">
 		<img
 			src="https://www.qatar2022.qa/themes/custom/sc/dist/img/svg/qatar-hero-shadow.svg"
 			alt="Logo do Qatar"
 			width="250px"
-			height="250px"
+			height="100px"
 		/>
 	</div>
 
@@ -74,6 +90,18 @@
 </div>
 
 <style>
+	.btn-container {
+		display: flex;
+		align-self: flex-start;
+		margin-left: 10px;
+		z-index: 2;
+	}
+	.btn-container a {
+		border: none;
+		background-color: transparent;
+		height: fit-content;
+		width: fit-content;
+	}
 	.main {
 		height: 100vh;
 		width: 100vw;
@@ -109,6 +137,6 @@
 		justify-content: center;
 		align-items: center;
 		overflow: auto;
-        gap: 10px;
+		gap: 10px;
 	}
 </style>
