@@ -1,6 +1,7 @@
 /* fontes das logos do qatar */
 
-@font-face {
+
+/* @font-face {
     font-family: 'GraphikArabic';
     src: url('../static/Qatar2022/Qatar2022/GraphikArabicMedium.otf');
 }
@@ -13,7 +14,7 @@
 @font-face {
     font-family: 'ArabicHeavy';
     src: url('../static/Qatar2022/Qatar2022/Qatar2022Arabic-Heavy.ttf');
-}
+} */
 
 * {
     margin: 0;
