@@ -6,9 +6,11 @@
 		{ name: 'Al Thumama Stadium' },
 		{ name: 'Al Janoub Stadium' },
 		{ name: 'Al Bayt Stadium' },
+		{ name: 'Al Rayyan Stadium' },
 		{ name: 'Ahmad Bin Ali Stadium' },
-		{ name: 'Ras Abu Aboud Stadium' },
-		{ name: 'Education City Stadium' }
+		{ name: 'Ras Abu Aboud Stadium' }, 
+		{ name: 'Education City Stadium' },
+		{ name: 'Stadium 974' }
 	];
 	let selecoes = [
 		{ name: 'Catar' },
