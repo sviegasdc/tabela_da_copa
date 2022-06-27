@@ -1,15 +1,16 @@
 <script>
 	import GameCard from '$lib/GameCard.svelte';
 	import MenuHamburger from '$lib/MenuHamburger.svelte';
+	import SideMenu from '$lib/SideMenu.svelte';
 	import '/src/app.css';
 	let jogos = ['', '', ''];
 	let isOpen = false;
 </script>
 
 <div class="main">
-
 	<div class="menu">
-		<MenuHamburger/>
+		<!-- <MenuHamburger/> -->
+		<SideMenu />
 	</div>
 	<div class="logo">
 		<img
@@ -20,8 +21,8 @@
 		/>
 	</div>
 	<div class="links">
-		<a href="/fase_de_grupos" style="margin-right:150px">Fase de Grupos</a>
-		<a href="/fase_final" style="margin-right: 150px;">Fase Final</a>
+		<a href="/fasedegrupos" style="margin-right:150px">Fase de Grupos</a>
+		<a href="/fasefinal" style="margin-right: 150px;">Fase Final</a>
 	</div>
 	<div class="show-games">
 		{#each jogos as jogo}
