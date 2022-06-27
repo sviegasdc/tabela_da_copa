@@ -1,5 +1,5 @@
 <script>
-    let flag = 'br';
+    export let flag = 'br';
 </script>
 
 <div class="main" style="
