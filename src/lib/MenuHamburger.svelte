@@ -8,7 +8,7 @@
 		{ name: 'Al Bayt Stadium' },
 		{ name: 'Al Rayyan Stadium' },
 		{ name: 'Ahmad Bin Ali Stadium' },
-		{ name: 'Ras Abu Aboud Stadium' }, 
+		{ name: 'Ras Abu Aboud Stadium' },
 		{ name: 'Education City Stadium' },
 		{ name: 'Stadium 974' }
 	];
@@ -98,18 +98,18 @@
 		display: none;
 		color: white;
 		overflow: auto;
-        border-radius: 10px;
+		border-radius: 10px;
 		height: 350px;
 		/* margin-left: 50px; */
 	}
 
-	.subnav-content#nav-estadio{
+	.subnav-content#nav-estadio {
 		height: 305px;
 	}
 
 	.subnav:hover .subnav-content {
 		display: block;
-        overflow: auto;
+		overflow: auto;
 	}
 
 	.estadios {

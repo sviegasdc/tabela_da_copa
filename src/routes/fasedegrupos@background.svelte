@@ -3,15 +3,15 @@
 	import '/src/app.css';
 	let grupoA = [
 		{ name: 'Qatar', abreviacao: 'qa' },
-		{ name: 'Ecuador', abreviacao: 'ec' },
+		{ name: 'Equador', abreviacao: 'ec' },
 		{ name: 'Senegal', abreviacao: 'sn' },
 		{ name: 'Holânda', abreviacao: 'nl' }
 	];
 	let grupoB = [
 		{ name: 'Inglaterra', abreviacao: 'gb-eng' },
-		{ name: 'Iran', abreviacao: 'ir' },
+		{ name: 'Irã', abreviacao: 'ir' },
 		{ name: 'Estados Unidos', abreviacao: 'us' },
-		{ name: 'Euro Play-off', abreviacao: 'qa' }
+		{ name: 'Gales', abreviacao: 'gb-wls' }
 	];
 	let grupoC = [
 		{ name: 'Argentina', abreviacao: 'ar' },
@@ -21,13 +21,13 @@
 	];
 	let grupoD = [
 		{ name: 'França', abreviacao: 'fr' },
-		{ name: 'IC play-off', abreviacao: 'qa' },
+		{ name: 'Austrália', abreviacao: 'au' },
 		{ name: 'Dinamarca', abreviacao: 'dk' },
 		{ name: 'Tunísia', abreviacao: 'tn' }
 	];
 	let grupoE = [
 		{ name: 'Espanha', abreviacao: 'es' },
-		{ name: 'IC play-off2', abreviacao: 'qa' },
+		{ name: 'Costa Rica', abreviacao: 'cr' },
 		{ name: 'Alemanha', abreviacao: 'de' },
 		{ name: 'Japão', abreviacao: 'jp' }
 	];
@@ -52,7 +52,7 @@
 </script>
 
 <div class="main">
-	<div class="btn-container">
+	<!-- <div class="btn-container">
 		<a
 			href="./"
 			style="text-decoration: none; color: white;width: fit-content;"
@@ -67,15 +67,15 @@
 				>Voltar</span
 			>
 		</a>
-	</div>
-	<div class="logo">
+	</div> -->
+	<!-- <div class="logo">
 		<img
 			src="https://www.qatar2022.qa/themes/custom/sc/dist/img/svg/qatar-hero-shadow.svg"
 			alt="Logo do Qatar"
 			width="250px"
 			height="100px"
 		/>
-	</div>
+	</div> -->
 
 	<div class="groups-container">
 		<GroupCard bind:grupo={grupoA} title="GRUPO A" />
@@ -90,7 +90,7 @@
 </div>
 
 <style>
-	.btn-container {
+	/* .btn-container {
 		display: flex;
 		align-self: flex-start;
 		margin-left: 10px;
@@ -101,8 +101,8 @@
 		background-color: transparent;
 		height: fit-content;
 		width: fit-content;
-	}
-	.main {
+	} */
+	/* .main {
 		height: 100vh;
 		width: 100vw;
 		background-image: url(https://raw.githubusercontent.com/ArnoldSGR/icons_tabela_da_copa/main/background.png);
@@ -114,19 +114,19 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-	}
-	.logo {
+	} */
+	/* .logo {
 		height: 100px;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: nowrap;
 		justify-content: center;
 		align-items: center;
-		/* border: 1px solid red; */
-	}
+		border: 1px solid red;
+	} */
 	.groups-container {
-		width: 90%;
-		max-width: 1024px;
+		width: 100%;
+		/* max-width: 1024px; */
 		height: 80%;
 		border-radius: 27px;
 		background-color: transparent;

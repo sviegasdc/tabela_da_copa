@@ -1,6 +1,5 @@
 /* fontes das logos do qatar */
 
-
 /* @font-face {
     font-family: 'GraphikArabic';
     src: url('../static/Qatar2022/Qatar2022/GraphikArabicMedium.otf');
@@ -17,39 +16,38 @@
 } */
 
 * {
-    margin: 0;
-    padding: 0;
-    font-family: GraphikArabic;
+	margin: 0;
+	padding: 0;
+	font-family: GraphikArabic;
 }
 
 html {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
-
 
 /*scroll bar related*/
 
 * {
-    scrollbar-width: thin;
-    scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+	scrollbar-width: thin;
+	scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
 }
 
 *::-webkit-scrollbar {
-    width: 12px;
-    height: 12px;
+	width: 12px;
+	height: 12px;
 }
 
 *::-webkit-scrollbar-track {
-    background: transparent;
+	background: transparent;
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 20px;
-    border: 3px solid transparent;
+	background-color: rgba(0, 0, 0, 0.3);
+	border-radius: 20px;
+	border: 3px solid transparent;
 }
 
 ::-webkit-scrollbar-corner {
-    background: rgba(0, 0, 0, 0.5);
+	background: rgba(0, 0, 0, 0.5);
 }

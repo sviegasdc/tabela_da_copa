@@ -1,5 +1,5 @@
 <script>
-	export let grupo = [{name:'',abreviacao:'qa'}];
+	export let grupo = [{ name: '', abreviacao: 'qa' }];
 	export let title = '';
 </script>
 
@@ -12,11 +12,11 @@
 		{#each grupo as time}
 			<p class="nome_times">
 				<img
-					src= https://flagcdn.com/{time.abreviacao}.svg
+					src="https://flagcdn.com/{time.abreviacao}.svg"
 					alt={time.name}
-                    width="40px"
-                    height="24px"
-                    style="margin-right: 5px;"
+					width="40px"
+					height="24px"
+					style="margin-right: 5px;"
 				/>
 				{time.name}
 			</p>
@@ -30,14 +30,14 @@
 		height: 270px;
 		/* margin: 15px; */
 		border-radius: 16px;
-		background-color: rgba(250, 250, 250,0.5);
+		background-color: rgba(250, 250, 250, 0.5);
 		color: black;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
 		justify-content: flex-start;
-        font-weight: bold;
-        color:white;
+		font-weight: bold;
+		color: white;
 	}
 	.times {
 		background-color: transparent;
@@ -55,8 +55,8 @@
 		width: 93%;
 		justify-content: flex-start;
 		/* border: 1px solid red; */
-        padding-top: 3px;
-        padding-left: 10px;
+		padding-top: 3px;
+		padding-left: 10px;
 	}
 	.card-header {
 		display: flex;
@@ -65,7 +65,7 @@
 		align-items: flex-end;
 		height: 30px;
 		width: 100%;
-		padding:10px 0;
+		padding: 10px 0;
 		font-weight: bold;
 		border-bottom: 2px solid #e1b101;
 	}

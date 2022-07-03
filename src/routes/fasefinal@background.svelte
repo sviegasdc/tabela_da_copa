@@ -2,38 +2,28 @@
 	import '/src/app.css';
 	import TeamCard from '$lib/TeamCard.svelte';
 	let gamesOitavasA = ['br', 'br', 'br', 'br', 'br', 'br', 'br', 'br'];
-	let gamesOitavasB = ['br', 'br', 'br', 'br', 'br', 'br', 'br', 'br'];
 	let gamesQuartasA = ['br', 'br', 'br', 'br'];
-	let gamesQuartasB = ['br', 'br', 'br', 'br'];
 	let gamesSemifinais = ['br', 'br'];
 	let final = ['br'];
 </script>
 
 <div class="main">
-	<div class="logo">
-		<img
-			src="https://www.qatar2022.qa/themes/custom/sc/dist/img/svg/qatar-hero-shadow.svg"
-			alt="Logo do Qatar"
-			width="250px"
-			height="250px"
-		/>
-	</div>
 	<div class="game-tree">
 		<div class="oitavas-a">
 			{#each gamesOitavasA as game}
-				<TeamCard flag = {game} />
+				<TeamCard flag={game} />
 			{/each}
 		</div>
 
 		<div class="quartas-a">
 			{#each gamesQuartasA as game}
-				<TeamCard flag = {game} />
+				<TeamCard flag={game} />
 			{/each}
 		</div>
 
 		<div class="semifinal-a">
 			{#each gamesSemifinais as game}
-				<TeamCard flag = {game} />
+				<TeamCard flag={game} />
 			{/each}
 		</div>
 
@@ -45,25 +35,7 @@
 				width="40px"
 			/>
 			{#each final as game}
-				<TeamCard flag = {game} />
-			{/each}
-		</div>
-
-		<div class="semifinal-b">
-			{#each gamesSemifinais as game}
-				<TeamCard flag = {game} />
-			{/each}
-		</div>
-
-		<div class="quartas-b">
-			{#each gamesQuartasB as game}
-				<TeamCard flag = {game} />
-			{/each}
-		</div>
-
-		<div class="oitavas-b">
-			{#each gamesOitavasB as game}
-				<TeamCard flag = {game} />
+				<TeamCard flag={game} />
 			{/each}
 		</div>
 	</div>
@@ -79,22 +51,22 @@
 		background-position: center center;
 		background-attachment: fixed;
 	}
-	.logo {
+	/* .logo {
 		height: 100px;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: nowrap;
 		justify-content: center;
 		align-items: center;
-		/* border: 1px solid red; */
-	}
+		border: 1px solid red;
+	} */
 	.game-tree {
 		display: flex;
 		justify-content: space-evenly;
 		align-items: center;
 		flex-wrap: nowrap;
 	}
-	.final{
+	.final {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;

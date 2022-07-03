@@ -68,7 +68,7 @@
 				alt="jogos por dia"
 				width="12px"
 				height="12px"
-                style="padding-left: 40px;"
+				style="padding-left: 40px;"
 			/>
 		</button>
 		{#if displayStadium}
@@ -81,7 +81,7 @@
 				alt="jogos por dia"
 				width="12px"
 				height="12px"
-                style="padding-left: 40px;"
+				style="padding-left: 40px;"
 			/>
 		</button>
 		{#if displaySelecao}
@@ -98,7 +98,7 @@
 				alt="jogos por dia"
 				width="12px"
 				height="12px"
-                style="padding-left: 15px;"
+				style="padding-left: 15px;"
 			/>
 		</button>
 		{#if displayByDate}
