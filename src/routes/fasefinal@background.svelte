@@ -7,6 +7,8 @@
 	let final = ['br'];
 </script>
 
+<title> Tabela da Copa - Fases Finais </title>
+
 <div class="main">
 	<div class="game-tree">
 		<div class="oitavas-a">
@@ -43,8 +45,8 @@
 
 <style>
 	.main {
-		height: 100vh;
-		width: 100vw;
+		/* height: 100vh; */
+		/* width: 100vw; */
 		background-image: url(https://raw.githubusercontent.com/ArnoldSGR/icons_tabela_da_copa/main/background.png);
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -71,5 +73,18 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+	}
+	@media (max-width: 1440px) {
+		.main {
+			width: 80%;
+			height: 80%;
+			overflow-y: scroll;
+			overflow-x: hidden;
+			margin: auto;
+		}
+	}
+
+	/*mobile tablet*/
+	@media (max-width: 768px) {
 	}
 </style>

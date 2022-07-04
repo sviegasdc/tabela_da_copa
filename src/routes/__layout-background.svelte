@@ -60,4 +60,14 @@
 		align-self: center;
 		/* border: 1px solid red; */
 	}
+
+	@media (max-width: 512px) {
+		.main {
+			background-size: 100%;
+			background-repeat: repeat;
+			background-image: rgba(0, 0, 0, 1);
+			height: 100%;
+			background-attachment: scroll;
+		}
+	}
 </style>

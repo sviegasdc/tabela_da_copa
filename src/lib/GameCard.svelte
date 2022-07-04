@@ -19,7 +19,7 @@
 			<p>{pais1}</p>
 			<img
 				src="https://flagcdn.com/{abrP1}.svg"
-				alt="Brasil"
+				alt={pais1}
 				class="flag"
 				width="30px"
 				height="20px"
@@ -29,7 +29,7 @@
 		<span class="country toleft">
 			<img
 				src="https://flagcdn.com/{abrP2}.svg"
-				alt="Alemanha"
+				alt={abrP2}
 				class="flag"
 				width="30px"
 				height="20px"
@@ -48,7 +48,7 @@
 		<div class="place-date">
 			<span> {local} </span>
 			<span> {data} </span>
-			<span> {hora} </span>
+			<span> {hora}:00 </span>
 		</div>
 	</div>
 </div>

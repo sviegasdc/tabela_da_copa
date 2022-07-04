@@ -1,48 +1,38 @@
 <script>
 	import GameCard from '$lib/GameCard.svelte';
 	import '/src/app.css';
-	//precisa pôr os dados reais!!!!
-	let jogos = [
-		'',
-		'',
-		'',
-		'',
-		'',
-		'',
-		'',
-		'',
-		'',
-		'',
-		'',
-		'',
-		'',
-		'',
-		'',
-		'',
-		'',
-		'',
-		'',
-		'',
-		'',
-		''
-	];
-	let moreThan6Games = false;
+	import jogos from '$lib/api/jogos.json';
+	console.log(jogos);
+
+	let showGamesAlignment = 'center';
 	//6 aqui é um número mágico, então tem grandes chances de dar errado, rever se possível
 	$: {
-		moreThan6Games = jogos.length > 6 ? true : false;
-		console.log(moreThan6Games);
+		showGamesAlignment = jogos.length >= 5 || jogos.length == 4 ? 'flex-start' : 'center';
+
+		jogos;
 	}
 </script>
+
+<title> Tabela da Copa - Índice </title>
 
 <div class="links">
 	<a href="/fasedegrupos" style="margin-right:150px">Fase de Grupos</a>
 	<a href="/fasefinal" style="margin-right: 150px;">Fase Final</a>
 </div>
-<div class="show-games">
-	<div class:spacer={moreThan6Games} />
+<div class="show-games" style="justify-content: {showGamesAlignment};">
 	{#each jogos as jogo}
 		<div>
-			<GameCard />
+			<GameCard
+				pais1={jogo.pais1}
+				abrP1={jogo.abrP1}
+				pais2={jogo.pais2}
+				abrP2={jogo.abrP2}
+				golsP1={jogo.golsP1}
+				golsP2={jogo.golsP2}
+				local={jogo.local}
+				data={jogo.data}
+				hora={jogo.hora}
+			/>
 		</div>
 	{/each}
 </div>
@@ -52,7 +42,7 @@
 		display: flex;
 		flex-direction: row;
 		flex-wrap: nowrap;
-		justify-content: center;
+		justify-content: flex-start;
 		align-items: center;
 		overflow: auto;
 		padding: 20px 0;
@@ -75,10 +65,6 @@
 		border-radius: 8px;
 		padding: 5px 10px;
 	}
-	.spacer {
-		margin: 0 500px;
-	}
-
 	@media (max-width: 768px) {
 		.show-games {
 			flex-direction: column;

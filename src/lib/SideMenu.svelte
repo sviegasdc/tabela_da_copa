@@ -4,6 +4,18 @@
 	let displayStadium = false;
 	let displaySelecao = false;
 	let displayByDate = false;
+	let estadios = [
+		{ name: 'Lusail Stadium' },
+		{ name: 'Khalifa International Stadium' },
+		{ name: 'Al Thumama Stadium' },
+		{ name: 'Al Janoub Stadium' },
+		{ name: 'Al Bayt Stadium' },
+		{ name: 'Al Rayyan Stadium' },
+		{ name: 'Ahmad Bin Ali Stadium' },
+		{ name: 'Ras Abu Aboud Stadium' },
+		{ name: 'Education City Stadium' },
+		{ name: 'Stadium 974' }
+	];
 	let selecoes = [
 		{ name: 'Catar' },
 		{ name: 'Equador' },
@@ -35,6 +47,20 @@
 		{ name: 'Gana' },
 		{ name: 'Uruguai' },
 		{ name: 'Coreia do Sul' }
+	];
+	let datas = [
+		{ name: '21/11/2022' },
+		{ name: '22/11/2022' },
+		{ name: '23/11/2022' },
+		{ name: '24/11/2022' },
+		{ name: '25/11/2022' },
+		{ name: '26/11/2022' },
+		{ name: '27/11/2022' },
+		{ name: '28/11/2022' },
+		{ name: '29/11/2022' },
+		{ name: '30/11/2022' },
+		{ name: '01/12/2022' },
+		{ name: '02/12/2022' }
 	];
 </script>
 
@@ -72,7 +98,11 @@
 			/>
 		</button>
 		{#if displayStadium}
-			<a href="sas">Estádio</a>
+			<div style="width: 100%;overflow: auto; padding-bottom: 100px;">
+				{#each estadios as estadio}
+					<div class="card">{estadio.name}</div>
+				{/each}
+			</div>
 		{/if}
 		<button on:click={() => (displaySelecao = !displaySelecao)} class="dropDownOppenner">
 			Seleções
@@ -102,7 +132,11 @@
 			/>
 		</button>
 		{#if displayByDate}
-			<a href="sas">masssa</a>
+			<div style="width: 100%;overflow: auto; padding-bottom: 100px;">
+				{#each datas as data}
+					<div class="card">{data.name}</div>
+				{/each}
+			</div>
 		{/if}
 	</div>
 {/if}
@@ -110,7 +144,7 @@
 <style>
 	.card {
 		color: white;
-		border: 1px solid red;
+		/* border: 1px solid red; */
 		height: 30px;
 		width: 100%;
 		display: flex;
@@ -118,7 +152,7 @@
 		flex-wrap: nowrap;
 		justify-content: center;
 		overflow: auto;
-		padding: 10px;
+		padding: 4px;
 	}
 	.dropDownOppenner {
 		background-color: cadetblue;
@@ -126,6 +160,7 @@
 		min-height: fit-content;
 		height: 30px;
 		color: white;
+		font-size: 20px;
 	}
 	.control-button {
 		width: 40px;

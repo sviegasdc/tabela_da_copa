@@ -51,6 +51,8 @@
 	];
 </script>
 
+<title> Tabela da Copa - Fase de Grupos </title>
+
 <div class="main">
 	<!-- <div class="btn-container">
 		<a
@@ -138,5 +140,19 @@
 		align-items: center;
 		overflow: auto;
 		gap: 10px;
+	}
+
+	@media (max-width: 1024px) {
+		.groups-container {
+			margin: auto;
+			width: 70%;
+			height: 35%;
+			overflow-y: scroll;
+		}
+		.main {
+			background-size: contain;
+			background-position: center;
+			background-color: transparent;
+		}
 	}
 </style>

@@ -11,7 +11,7 @@
 		"data": "21/11/2022",
 		"hora": 13,
 		"tipoJogo": "grupo",
-		"id": 2
+		"id": 1
 	},
 	{
 		"pais1": "Qatar",
@@ -72,7 +72,7 @@
 	{
 		"pais1": "México",
 		"abrP1": "mx",
-		"pais2": "Polónia",
+		"pais2": "Polônia",
 		"abrP2": "pl",
 		"golsP1": 0,
 		"golsP2": 0,
@@ -168,7 +168,7 @@
 		"id": 12
 	},
 	{
-		"pais1": "Suiça",
+		"pais1": "Suíça",
 		"abrP1": "ch",
 		"pais2": "Camarões",
 		"abrP2": "cm",
@@ -196,7 +196,7 @@
 		"id": 14
 	},
 	{
-		"pais1": "Urugai",
+		"pais1": "Uruguai",
 		"abrP1": "uy",
 		"pais2": "Coreia do Sul",
 		"abrP2": "kr",
@@ -280,7 +280,7 @@
 		"id": 20
 	},
 	{
-		"pais1": "Polónia",
+		"pais1": "Polônia",
 		"abrP1": "pl",
 		"pais2": "Arábia Saudita",
 		"abrP2": "sa",
@@ -295,7 +295,7 @@
 	},
 	{
 		"pais1": "Argentina",
-		"abrP1": "a",
+		"abrP1": "ar",
 		"pais2": "México",
 		"abrP2": "mx",
 		"golsP1": 0,
@@ -479,7 +479,7 @@
 		"pais1": "Irã",
 		"abrP1": "ir",
 		"pais2": "Estados Unidos",
-		"abrP2": "",
+		"abrP2": "us",
 		"golsP1": 0,
 		"golsP2": 0,
 		"grupo": "B",
@@ -504,7 +504,7 @@
 		"id": 36
 	},
 	{
-		"pais1": "Polónia",
+		"pais1": "Polônia",
 		"abrP1": "pl",
 		"pais2": "Argentina",
 		"abrP2": "ar",
