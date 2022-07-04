@@ -5,15 +5,13 @@
 	let displaySelecao = false;
 	let displayByDate = false;
 	let estadios = [
-		{ name: 'Lusail Stadium' },
-		{ name: 'Khalifa International Stadium' },
+		{ name: 'Lusail Stadium' }, 
+		{ name: 'Khalifa International Stadium' }, 
 		{ name: 'Al Thumama Stadium' },
-		{ name: 'Al Janoub Stadium' },
-		{ name: 'Al Bayt Stadium' },
-		{ name: 'Al Rayyan Stadium' },
-		{ name: 'Ahmad Bin Ali Stadium' },
-		{ name: 'Ras Abu Aboud Stadium' },
-		{ name: 'Education City Stadium' },
+		{ name: 'Al Janoub Stadium' }, 
+		{ name: 'Al Bayt Stadium' }, 
+		{ name: 'Ahmad Bin Ali Stadium' }, 
+		{ name: 'Education City Stadium' }, 
 		{ name: 'Stadium 974' }
 	];
 	let selecoes = [

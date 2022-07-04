@@ -11,6 +11,10 @@
 	export let data = '21/11/2022';
 	export let hora = 12;
 	// export let tipoJogo = 'final';
+	const nomeStadiumformat = () => {
+		let str = local.toLocaleLowerCase()
+		return str.replace(/\s+/g,'');
+	}
 </script>
 
 <div class="main-container">
@@ -44,7 +48,7 @@
 			<span class="rank-value"> <input value={golsP2} class="goal-input" placeholder="0" /> </span>
 		</div>
 	</div>
-	<div class="card-footer">
+	<div class="card-footer" style="background-image: url('https://raw.githubusercontent.com/ArnoldSGR/icons_tabela_da_copa/main/estadios/{nomeStadiumformat()}.jpg');">
 		<div class="place-date">
 			<span> {local} </span>
 			<span> {data} </span>
@@ -120,7 +124,6 @@
 		padding: 10px 0;
 	}
 	.card-footer {
-		background-image: url('https://s2.glbimg.com/pnyfacy0drc425hEg_fEcATTuw8=/620x455/e.glbimg.com/og/ed/f/original/2021/12/07/al-bayt-stadium-casaejardim.jpeg');
 		background-size: 100%;
 		background-repeat: no-repeat;
 		background-position: center;
