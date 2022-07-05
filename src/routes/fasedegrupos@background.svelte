@@ -54,31 +54,6 @@
 <title> Tabela da Copa - Fase de Grupos </title>
 
 <div class="main">
-	<!-- <div class="btn-container">
-		<a
-			href="./"
-			style="text-decoration: none; color: white;width: fit-content;"
-		>
-			<img
-				src="https://raw.githubusercontent.com/ArnoldSGR/icons_tabela_da_copa/main/btn-voltar.svg"
-				alt="Voltar"
-				width="70px"
-				height="70px"
-			/>
-			<span style="position: relative; z-index: 2; bottom:32px; right:44px;font-size: 12px;"
-				>Voltar</span
-			>
-		</a>
-	</div> -->
-	<!-- <div class="logo">
-		<img
-			src="https://www.qatar2022.qa/themes/custom/sc/dist/img/svg/qatar-hero-shadow.svg"
-			alt="Logo do Qatar"
-			width="250px"
-			height="100px"
-		/>
-	</div> -->
-
 	<div class="groups-container">
 		<GroupCard bind:grupo={grupoA} title="GRUPO A" />
 		<GroupCard bind:grupo={grupoB} title="GRUPO B" />
@@ -92,67 +67,31 @@
 </div>
 
 <style>
-	/* .btn-container {
-		display: flex;
-		align-self: flex-start;
-		margin-left: 10px;
-		z-index: 2;
-	}
-	.btn-container a {
-		border: none;
-		background-color: transparent;
-		height: fit-content;
-		width: fit-content;
-	} */
-	/* .main {
+	.main {
 		height: 100vh;
-		width: 100vw;
-		background-image: url(https://raw.githubusercontent.com/ArnoldSGR/icons_tabela_da_copa/main/background.png);
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center center;
-		background-attachment: fixed;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	} */
-	/* .logo {
-		height: 100px;
-		display: flex;
-		flex-direction: row;
-		flex-wrap: nowrap;
-		justify-content: center;
-		align-items: center;
-		border: 1px solid red;
-	} */
+		overflow: hidden;
+	}
+
 	.groups-container {
-		width: 100%;
-		/* max-width: 1024px; */
-		height: 80%;
+		height: 100vh;
 		border-radius: 27px;
-		background-color: transparent;
 		color: #fafafa;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
-		overflow: auto;
+		overflow-y: scroll;
 		gap: 10px;
 	}
 
 	@media (max-width: 1024px) {
 		.groups-container {
 			margin: auto;
-			width: 70%;
-			height: 35%;
-			overflow-y: scroll;
-		}
-		.main {
-			background-size: contain;
-			background-position: center;
-			background-color: transparent;
+			width: 100%;
+			overflow: auto;
+			height: 100vh;
 		}
 	}
+
 </style>

@@ -4,87 +4,133 @@
 	let gamesOitavasA = ['br', 'br', 'br', 'br', 'br', 'br', 'br', 'br'];
 	let gamesQuartasA = ['br', 'br', 'br', 'br'];
 	let gamesSemifinais = ['br', 'br'];
-	let final = ['br'];
+	let final = 'br';
 </script>
 
 <title> Tabela da Copa - Fases Finais </title>
 
-<div class="main">
-	<div class="game-tree">
-		<div class="oitavas-a">
-			{#each gamesOitavasA as game}
-				<TeamCard flag={game} />
-			{/each}
-		</div>
-
-		<div class="quartas-a">
-			{#each gamesQuartasA as game}
-				<TeamCard flag={game} />
-			{/each}
-		</div>
-
-		<div class="semifinal-a">
-			{#each gamesSemifinais as game}
-				<TeamCard flag={game} />
-			{/each}
-		</div>
-
-		<div class="final">
-			<img
-				src="https://raw.githubusercontent.com/ArnoldSGR/icons_tabela_da_copa/main/copo.png"
-				alt="Taça"
-				height="40px"
-				width="40px"
-			/>
-			{#each final as game}
-				<TeamCard flag={game} />
-			{/each}
-		</div>
+<div class="game-tree">
+	<div class="primeira-coluna">
+		{#each gamesOitavasA as game}
+			<TeamCard />
+		{/each}
+	</div>
+	<div class="segunda-coluna">
+		{#each gamesQuartasA as game}
+			<TeamCard />
+		{/each}
+	</div>
+	<div class="terceira-coluna">
+		{#each gamesSemifinais as game}
+			<TeamCard />
+		{/each}
+	</div>
+	<div class="quarta-coluna">
+		<!-- final -->
+		<TeamCard />
 	</div>
 </div>
 
 <style>
-	.main {
-		/* height: 100vh; */
-		/* width: 100vw; */
-		background-image: url(https://raw.githubusercontent.com/ArnoldSGR/icons_tabela_da_copa/main/background.png);
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center center;
-		background-attachment: fixed;
-	}
-	/* .logo {
-		height: 100px;
-		display: flex;
-		flex-direction: row;
-		flex-wrap: nowrap;
-		justify-content: center;
-		align-items: center;
-		border: 1px solid red;
-	} */
 	.game-tree {
 		display: flex;
-		justify-content: space-evenly;
+		justify-content: flex-start;
 		align-items: center;
 		flex-wrap: nowrap;
+		/* background-image: url(https://raw.githubusercontent.com/ArnoldSGR/icons_tabela_da_copa/main/background.png) ;
+		background-repeat: no-repeat;
+		background-size: auto auto;
+		background-position: center center;
+		background-attachment: fixed; */
+		overflow: scroll;
+		height: 85%;
 	}
-	.final {
+
+	.primeira-coluna {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		padding-right: 10%;
 	}
-	@media (max-width: 1440px) {
-		.main {
-			width: 80%;
-			height: 80%;
-			overflow-y: scroll;
-			overflow-x: hidden;
-			margin: auto;
+	.segunda-coluna {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 50px;
+		padding-right: 10%;
+	}
+	.terceira-coluna {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 220px;
+		padding-right: 10%;
+	}
+	.quarta-coluna {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 100px;
+	}
+	@media(max-width: 1024px) {
+		.game-tree {
+			flex-direction: column;
+			margin-left: 3%;
+			height: 60%;
 		}
+
+		.primeira-coluna {
+			flex-direction: row;
+			gap: 0;
+		}
+		.segunda-coluna {
+			flex-direction: row;
+			gap: 0;
+			margin-left: 45%;
+		} 
+		.terceira-coluna {
+			flex-direction: row;
+			gap: 0;
+			margin-left: 45%;
+		}
+		.quarta-coluna {
+			flex-direction: row;
+			gap: 0;
+			margin-left: 37%;
+		}
+	
 	}
 
-	/*mobile tablet*/
-	@media (max-width: 768px) {
+	@media(max-width: 768px) {
+		.game-tree {
+			flex-direction: column;
+			margin-left: 3%;
+			height: 60%;
+		}
+
+		.primeira-coluna {
+			flex-direction: row;
+			gap: 0;
+			margin-left: 160%;
+		}
+		.segunda-coluna {
+			flex-direction: row;
+			gap: 0;
+			margin-left: 160%;
+		} 
+		.terceira-coluna {
+			flex-direction: row;
+			gap: 0;
+			margin-left: 160%;
+		}
+		.quarta-coluna {
+			flex-direction: row;
+			gap: 0;
+			margin-left: 150%;
+		}
 	}
 </style>

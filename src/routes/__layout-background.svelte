@@ -26,14 +26,10 @@
 	.main {
 		height: 100vh;
 		width: 100vw;
-		background-image: url(https://raw.githubusercontent.com/ArnoldSGR/icons_tabela_da_copa/main/background.png);
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center center;
-		background-attachment: fixed;
+		background: rgb(126,20,44);
+		background: linear-gradient(145deg, rgba(126,20,44,1) 0%, rgba(94,16,38,1) 46%, rgba(56,11,26,1) 79%);
 	}
 	.layout-header {
-		/* border: 1px solid red; */
 		display: flex;
 		flex-direction: row;
 		flex-wrap: nowrap;
@@ -41,7 +37,6 @@
 		align-items: center;
 	}
 	.menu {
-		/* border: 1px solid red; */
 		position: absolute;
 		top: 20px;
 		left: 20px;
@@ -58,16 +53,39 @@
 		justify-content: center;
 		align-items: center;
 		align-self: center;
-		/* border: 1px solid red; */
 	}
 
-	@media (max-width: 512px) {
+	@media (max-width: 1920px) {
 		.main {
-			background-size: 100%;
-			background-repeat: repeat;
-			background-image: rgba(0, 0, 0, 1);
-			height: 100%;
-			background-attachment: scroll;
+			background: rgb(126,20,44);
+			background: linear-gradient(145deg, rgba(126,20,44,1) 0%, rgba(94,16,38,1) 46%, rgba(56,11,26,1) 79%);
+			width: 100vw;
 		}
 	}
+
+	@media (max-width: 1440px) {
+		.main {
+			width: 100vw;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.main {
+			height: 100vh;
+			overflow-y: hidden;
+		}
+	}
+
+	@media (max-width: 375px) {
+		.main {
+			height: 100vh;
+			overflow-y: hidden;
+		}
+		.menu {
+			margin-left: 1px;
+			margin-right: 2px;
+		}
+	}   .logo {
+		margin-left: 30px;
+		}
 </style>

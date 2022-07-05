@@ -75,7 +75,7 @@
 		<button
 			on:click={() => (isOpen = !isOpen)}
 			class="control-button"
-			style="align-self: flex-end;margin: 8px 8px 8px 30px ;border: 1px solid red;"
+			style="align-self: flex-end;margin: 8px 8px 8px 30px ;"
 		>
 			<img
 				src="https://raw.githubusercontent.com/ArnoldSGR/icons_tabela_da_copa/main/x-white.svg"
@@ -96,7 +96,7 @@
 			/>
 		</button>
 		{#if displayStadium}
-			<div style="width: 100%;overflow: auto; padding-bottom: 100px;">
+			<div style="width:100%;overflow: auto; overflow-X: hidden;">
 				{#each estadios as estadio}
 					<div class="card">{estadio.name}</div>
 				{/each}
@@ -113,7 +113,7 @@
 			/>
 		</button>
 		{#if displaySelecao}
-			<div style="width: 100%;overflow: auto; padding-bottom: 100px;">
+			<div style="width: 100%;overflow: auto;">
 				{#each selecoes as selecao}
 					<div class="card">{selecao.name}</div>
 				{/each}
