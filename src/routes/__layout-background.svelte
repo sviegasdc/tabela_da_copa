@@ -5,7 +5,6 @@
 <div class="main">
 	<div class="layout-header">
 		<div class="menu">
-			<!-- <MenuHamburger/> -->
 			<SideMenu />
 		</div>
 		<div class="logo">
@@ -25,10 +24,16 @@
 <style>
 	.main {
 		height: 100vh;
-		width: 100vw;
-		background: rgb(126,20,44);
-		background: linear-gradient(145deg, rgba(126,20,44,1) 0%, rgba(94,16,38,1) 46%, rgba(56,11,26,1) 79%);
+		max-width: 100%;
+		background-color: rgb(126, 20, 44);
+		background-image: url(https://raw.githubusercontent.com/ArnoldSGR/icons_tabela_da_copa/17a5af46055b5fc69fbbd8a4a8d868e1011e13e2/bg.svg);
+		background-repeat: no-repeat;
+		background-position: center center;
+		/* border: 1px solid blue; */
+		background-size: cover;
+		/* border: 1px solid red; */
 	}
+
 	.layout-header {
 		display: flex;
 		flex-direction: row;
@@ -55,17 +60,10 @@
 		align-self: center;
 	}
 
-	@media (max-width: 1920px) {
-		.main {
-			background: rgb(126,20,44);
-			background: linear-gradient(145deg, rgba(126,20,44,1) 0%, rgba(94,16,38,1) 46%, rgba(56,11,26,1) 79%);
-			width: 100vw;
-		}
-	}
-
 	@media (max-width: 1440px) {
 		.main {
-			width: 100vw;
+			height: 100vh;
+			overflow-y: hidden;
 		}
 	}
 
@@ -85,7 +83,8 @@
 			margin-left: 1px;
 			margin-right: 2px;
 		}
-	}   .logo {
+	}
+	.logo {
 		margin-left: 30px;
-		}
+	}
 </style>

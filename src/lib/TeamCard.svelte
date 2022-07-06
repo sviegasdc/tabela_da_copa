@@ -35,8 +35,10 @@
 		margin: 10px;
 		width: 200px;
 		height: 100px;
-		background-color: #bf533f;
-		border-radius: 13px;
+		/* background-color: #bf533f;
+		border-radius: 13px; */
+		border-radius: 16px;
+		background-color: rgba(250, 250, 250, 0.5);
 	}
 	.times {
 		display: flex;

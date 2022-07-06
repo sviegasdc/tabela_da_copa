@@ -1,6 +1,6 @@
 <script>
 	import GroupCard from '$lib/GroupCard.svelte';
-	import '/src/app.css';
+	import SideMenu from '$lib/SideMenu.svelte';
 	let grupoA = [
 		{ name: 'Qatar', abreviacao: 'qa' },
 		{ name: 'Equador', abreviacao: 'ec' },
@@ -51,9 +51,22 @@
 	];
 </script>
 
-<title> Tabela da Copa - Fase de Grupos </title>
-
 <div class="main">
+	<div class="layout-header">
+		<div class="menu">
+			<SideMenu />
+		</div>
+		<div class="logo">
+			<a href="/">
+				<img
+					src="https://www.qatar2022.qa/themes/custom/sc/dist/img/svg/qatar-hero-shadow.svg"
+					alt="Logo do Qatar"
+					width="250px"
+					height="80px"
+				/>
+			</a>
+		</div>
+	</div>
 	<div class="groups-container">
 		<GroupCard bind:grupo={grupoA} title="GRUPO A" />
 		<GroupCard bind:grupo={grupoB} title="GRUPO B" />
@@ -68,10 +81,13 @@
 
 <style>
 	.main {
-		height: 100vh;
-		overflow: hidden;
+		height: 100%;
+		background-color: rgb(126, 20, 44);
+		background-image: url(https://raw.githubusercontent.com/ArnoldSGR/icons_tabela_da_copa/17a5af46055b5fc69fbbd8a4a8d868e1011e13e2/bg.svg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		/* border: 1px solid blue; */
 	}
-
 	.groups-container {
 		height: 100vh;
 		border-radius: 27px;
@@ -84,14 +100,45 @@
 		overflow-y: scroll;
 		gap: 10px;
 	}
-
-	@media (max-width: 1024px) {
-		.groups-container {
-			margin: auto;
-			width: 100%;
-			overflow: auto;
-			height: 100vh;
+	.layout-header {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-items: center;
+	}
+	.menu {
+		position: absolute;
+		top: 20px;
+		left: 20px;
+		display: flex;
+		justify-content: flex-start;
+		justify-self: flex-start;
+		margin-left: 20px;
+	}
+	.logo {
+		height: 100px;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-items: center;
+		align-self: center;
+	}
+	@media (width: 375px) {
+		.menu {
+			margin-left: auto;
+		}
+		.logo {
+			margin-left: 30px;
 		}
 	}
-
+	@media (width: 320px) {
+		.menu {
+			margin-left: auto;
+		}
+		.logo {
+			margin-left: 30px;
+		}
+	}
 </style>

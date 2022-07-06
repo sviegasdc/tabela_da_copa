@@ -31,7 +31,7 @@
 		/* margin: 15px; */
 		border-radius: 16px;
 		background-color: rgba(250, 250, 250, 0.5);
-		color: black;
+		/* color: black; */
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
