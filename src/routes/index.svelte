@@ -1,31 +1,47 @@
 <script>
-	import { browser } from "$app/env";
+	import { browser } from '$app/env';
 	import '/src/app.css';
 	import jogos from '$lib/api/jogos.json';
 	import GameCard from '$lib/GameCard.svelte';
 	import SideMenu from '$lib/SideMenu.svelte';
 	import { persistStorage, getStorage, storageExists } from '$lib/api/persistStore.js';
+	let dados = [];
 
-	if (browser)
-		if (!storageExists('jogos'))
-			persistStorage('jogos', JSON.stringify(jogos));
+	const getAllData = () => {
+		if (browser) {
+			if (!storageExists('jogos')) persistStorage('jogos', JSON.stringify(jogos));
+			let jogosArmazenados = getStorage('jogos');
+			dados = JSON.parse(jogosArmazenados);
+		}
+	};
+
+	getAllData();
 
 	let showGamesAlignment = 'center';
-	
-	// const hdlStadiumFilter = (local)=> {
-	// 	let exibitGames =  jogos.filter(j => j.local == local);
-	// 	return exibitGames;
-	// }
 
-	// const hdlTeamFilter = (pais)=> {
-	// 	let exibitGames =  jogos.filter(j => j.pais1 == pais || j.pais2 == pais);
-	// 	return exibitGames;
-	// }
-	
+	const hdlStadiumFilter = (local) => {
+		let exibitGames = dados.filter((j) => j.local == local);
+		gamesInExibition = exibitGames;
+		return exibitGames;
+	};
+
+	const hdlTeamFilter = (pais) => {
+		let exibitGames = dados.filter((j) => j.pais1 == pais || j.pais2 == pais);
+		gamesInExibition = exibitGames;
+		return exibitGames;
+	};
+	const hdlDataFilter = (data) => {
+		let exibitGames = dados.filter((j) => j.data == data);
+		gamesInExibition = exibitGames;
+		return exibitGames;
+	};
+
+	let gamesInExibition = dados;
+
 	$: {
-		showGamesAlignment = jogos.length >= 5 || jogos.length == 4 ? 'flex-start' : 'center';
+		showGamesAlignment = dados.length >= 5 || dados.length == 4 ? 'flex-start' : 'center';
 
-		jogos;
+		gamesInExibition;
 	}
 </script>
 
@@ -33,7 +49,11 @@
 <div class="main">
 	<div class="layout-header">
 		<div class="menu">
-			<SideMenu />
+			<SideMenu
+				on:stadiumSelect={(e) => console.log(hdlStadiumFilter(e.detail))}
+				on:teamSelect={(e) => console.log(hdlTeamFilter(e.detail))}
+				on:dataSelect={(e) => console.log(hdlDataFilter(e.detail))}
+			/>
 		</div>
 		<div class="logo">
 			<a href="/">
@@ -51,7 +71,7 @@
 		<a class="fasefinal" href="/fasefinal">Fase Final</a>
 	</div>
 	<div class="show-games" style="justify-content: {showGamesAlignment};">
-		{#each jogos as jogo}
+		{#each gamesInExibition as jogo}
 			<div class="game">
 				<GameCard
 					pais1={jogo.pais1}
@@ -63,6 +83,8 @@
 					local={jogo.local}
 					data={jogo.data}
 					hora={jogo.hora}
+					id={jogo.id}
+					localImgName={jogo.localImgName}
 				/>
 			</div>
 		{/each}
@@ -119,8 +141,8 @@
 	}
 	.menu {
 		position: absolute;
-		top: 20px;
-		left: 20px;
+		top: 6px;
+		left: 10px;
 		display: flex;
 		justify-content: flex-start;
 		justify-self: flex-start;
@@ -192,7 +214,7 @@
 			background-size: cover;
 		}
 	}
-	@media (width: 375px) {
+	@media (max-width: 375px) {
 		.menu {
 			margin-left: auto;
 		}
