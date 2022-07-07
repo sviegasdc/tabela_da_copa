@@ -3,10 +3,24 @@
 </script>
 
 <div class="main">
-	<div class="layout-header">
-		<div class="menu">
+	 <div class="layout-header">
+		<!--<div class="menu">
 			<SideMenu />
+
+			<
+
+		</div> -->
+		<div class="menu">
+				<a href="/"> 
+					<img
+						src="https://raw.githubusercontent.com/ArnoldSGR/icons_tabela_da_copa/484ed665d074d77a64244452be9cc9a5b0f619f2/btn-voltar.svg"
+						alt="Botão de voltar"
+						width="80px"
+						height="80px"
+					/>
+				</a>
 		</div>
+
 		<div class="logo">
 			<a href="/">
 				<img
@@ -43,8 +57,8 @@
 	}
 	.menu {
 		position: absolute;
-		top: 20px;
-		left: 20px;
+		top: 6px;
+		left: 10px;
 		display: flex;
 		justify-content: flex-start;
 		justify-self: flex-start;
@@ -87,4 +101,24 @@
 	.logo {
 		margin-left: 30px;
 	}
+	@media (max-width: 470px) {
+		.menu {
+			margin-left: auto;
+		}
+		.logo {
+			margin-left: 30px;
+		}
+	}
+	@media (max-width: 375px) {
+		.menu {
+			margin-left: auto;
+		}
+		.menu img {
+			width: 70px;
+		}
+		.logo {
+			margin-left: 70px;
+		}
+	}
+	
 </style>
