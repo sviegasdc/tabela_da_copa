@@ -2,7 +2,7 @@
 	import GroupCard from '$lib/GroupCard.svelte';
 	import SideMenu from '$lib/SideMenu.svelte';
 	let grupoA = [
-		{ name: 'Qatar', abreviacao: 'qa' },
+		{ name: 'Catar', abreviacao: 'qa' },
 		{ name: 'Equador', abreviacao: 'ec' },
 		{ name: 'Senegal', abreviacao: 'sn' },
 		{ name: 'Holânda', abreviacao: 'nl' }
@@ -40,7 +40,7 @@
 	let grupoG = [
 		{ name: 'Brasil', abreviacao: 'br' },
 		{ name: 'Sérvia', abreviacao: 'rs' },
-		{ name: 'Suiça', abreviacao: 'ch' },
+		{ name: 'Suíça', abreviacao: 'ch' },
 		{ name: 'Camarôes', abreviacao: 'cm' }
 	];
 	let grupoH = [
@@ -53,8 +53,19 @@
 
 <div class="main">
 	<div class="layout-header">
-		<div class="menu">
+		<!-- <div class="menu">
 			<SideMenu />
+		</div>  -->
+		<div class="menu">
+			<a href="/"> 
+				<img
+					src="https://raw.githubusercontent.com/ArnoldSGR/icons_tabela_da_copa/484ed665d074d77a64244452be9cc9a5b0f619f2/btn-voltar.svg"
+					alt="Botão de voltar"
+					width="80px"
+					height="80px"
+				/>
+				
+			</a>
 		</div>
 		<div class="logo">
 			<a href="/">
@@ -77,7 +88,7 @@
 		<GroupCard bind:grupo={grupoG} title="GRUPO G" />
 		<GroupCard bind:grupo={grupoH} title="GRUPO H" />
 	</div>
-</div>
+</div> 
 
 <style>
 	.main {
@@ -106,11 +117,12 @@
 		flex-wrap: nowrap;
 		justify-content: center;
 		align-items: center;
+		/* border: 1px solid blue; */
 	}
 	.menu {
 		position: absolute;
-		top: 20px;
-		left: 20px;
+		top: 6px;
+		left: 10px;
 		display: flex;
 		justify-content: flex-start;
 		justify-self: flex-start;
@@ -125,7 +137,7 @@
 		align-items: center;
 		align-self: center;
 	}
-	@media (width: 375px) {
+	@media (max-width: 470px) {
 		.menu {
 			margin-left: auto;
 		}
@@ -133,12 +145,15 @@
 			margin-left: 30px;
 		}
 	}
-	@media (width: 320px) {
+	@media (max-width: 375px) {
 		.menu {
 			margin-left: auto;
 		}
+		.menu img {
+			width: 70px;
+		}
 		.logo {
-			margin-left: 30px;
+			margin-left: 70px;
 		}
 	}
 </style>
