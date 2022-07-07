@@ -1,11 +1,31 @@
 {
-	"name": "Tabela Qatar 2022",
-	"short_name": "Tabela da copa",
-	"icons": [],
-	"start_url": "/",
-	"display": "standalone",
-	"scope": "/",
-	"background_color": "#7e142c",
-	"theme_color": "#7e142c",
-	"description": "Tabela da copa FIFA Qatar 2022"
+    "name": "Tabela Qatar 2022",
+    "short_name": "Tabela da copa",
+    "icons": [{
+            "src": "favicon.png",
+            "sizes": "184x220",
+            "type": "image"
+        },
+        {
+            "src": "256x256.jpg",
+            "sizes": "256x256",
+            "type": "image"
+        },
+        {
+            "src": "144x144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "48x48.jpg",
+            "sizes": "48x48",
+            "type": "image"
+        }
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "scope": "/",
+    "background_color": "#7e142c",
+    "theme_color": "#7e142c",
+    "description": "Tabela da copa FIFA Qatar 2022"
 }
