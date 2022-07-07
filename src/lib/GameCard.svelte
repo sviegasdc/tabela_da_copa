@@ -1,4 +1,6 @@
 <script>
+	import { browser } from '$app/env';
+	import { persistStorage, getStorage, storageExists } from '$lib/api/persistStore.js';
 	import '/src/app.css';
 	export let pais1 = 'Brasil';
 	export let abrP1 = 'br';
@@ -6,15 +8,33 @@
 	export let abrP2 = 'de';
 	export let golsP1 = 0;
 	export let golsP2 = 0;
-	// export let grupo = 'A';
-	export let local = 'All Bait Stadium';
+	export let local = 'All Bayt Stadium';
+	export let localImgName = 'allbaytstadium';
 	export let data = '21/11/2022';
 	export let hora = 12;
+	export let id = 0;
+
 	// export let tipoJogo = 'final';
 	const nomeStadiumformat = () => {
-		let str = local.toLocaleLowerCase()
-		return str.replace(/\s+/g,'');
-	}
+		let str = local.toLocaleLowerCase();
+		return console.log('str',str.replace(/\s+/g, ''));
+	};
+	nomeStadiumformat();
+	const saveGoals = () => {
+		golsP1 = parseInt(String(golsP1).replace('0', ''));
+		golsP2 = parseInt(String(golsP2).replace('0', ''));
+		golsP1 = golsP1 >= 0 ? golsP1 : 0;
+		golsP2 = golsP2 >= 0 ? golsP2 : 0;
+		if (browser) {
+			let jogos = getStorage('jogos');
+			let jsonJogos = JSON.parse(jogos);
+			console.log(jsonJogos[id - 1]);
+			if (jsonJogos[id - 1].golsP1 != golsP1) jsonJogos[id - 1].golsP1 = golsP1;
+			if (jsonJogos[id - 1].golsP2 != golsP2) jsonJogos[id - 1].golsP2 = golsP2;
+			jogos = JSON.stringify(jsonJogos);
+			persistStorage('jogos', jogos);
+		}
+	};
 </script>
 
 <div class="main-container">
@@ -43,12 +63,29 @@
 	</div>
 	<div class="card-content">
 		<div class="ranking">
-			<span class="rank-value"> <input value={golsP1} class="goal-input" placeholder="0" /> </span>
+			<span class="rank-value">
+				<input
+					on:blur={saveGoals}
+					bind:value={golsP1}
+					class="goal-input"
+					placeholder="0"
+				/>
+			</span>
 			<span class="rank-value"> : </span>
-			<span class="rank-value"> <input value={golsP2} class="goal-input" placeholder="0" /> </span>
+			<span class="rank-value">
+				<input
+					on:blur={saveGoals}
+					bind:value={golsP2}
+					class="goal-input"
+					placeholder="0"
+				/>
+			</span>
 		</div>
 	</div>
-	<div class="card-footer" style="background-image: url('https://raw.githubusercontent.com/ArnoldSGR/icons_tabela_da_copa/main/estadios/{nomeStadiumformat()}.jpg');">
+	<div
+		class="card-footer"
+		style="background-image: url('https://raw.githubusercontent.com/ArnoldSGR/icons_tabela_da_copa/main/estadios/{localImgName}.jpg');"
+	>
 		<div class="place-date">
 			<span> {local} </span>
 			<span> {data} </span>
