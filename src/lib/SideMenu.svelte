@@ -119,15 +119,16 @@
 		</button>
 		{#if displayStadium} -->
 		<h4 class="filtrar">Filtragem por estádio</h4>
-			<select class="select"
-				bind:value={selectedStadium}
-				on:change={() => hdlStadiumClick()}
-				style="width:100%;overflow: auto; overflow-X: hidden;"
-			>
-				{#each estadios as estadio}
-					<option class="card">{estadio.name}</option>
-				{/each}
-			</select>
+		<select
+			class="select"
+			bind:value={selectedStadium}
+			on:change={() => hdlStadiumClick()}
+			style="width:100%;overflow: auto; overflow-X: hidden;"
+		>
+			{#each estadios as estadio}
+				<option class="card">{estadio.name}</option>
+			{/each}
+		</select>
 		<!-- {/if} -->
 		<!-- <button on:click={() => (displaySelecao = !displaySelecao)} class="dropDownOppenner">
 			Seleções
@@ -141,15 +142,16 @@
 		</button>
 		{#if displaySelecao} -->
 		<h4 class="filtrar2">Filtragem por equipe</h4>
-			<select class="select"
-				bind:value={selectedTeam}
-				on:change={() => hdlTeamClick()}
-				style="width: 100%;overflow: auto;"
-			>
-				{#each selecoes as selecao}
-					<option class="card">{selecao.name}</option>
-				{/each}
-			</select>
+		<select
+			class="select"
+			bind:value={selectedTeam}
+			on:change={() => hdlTeamClick()}
+			style="width: 100%;overflow: auto;"
+		>
+			{#each selecoes as selecao}
+				<option class="card">{selecao.name}</option>
+			{/each}
+		</select>
 		<!-- {/if} -->
 		<!-- <button on:click={() => (displayByDate = !displayByDate)} class="dropDownOppenner">
 			Jogos por Dia
@@ -163,15 +165,16 @@
 		</button>
 		{#if displayByDate} -->
 		<h4 class="filtrar3">Filtragem por data</h4>
-			<select class="select"
-				bind:value={selectedData}
-				on:change={() => hdlDataClick()}
-				style="width: 100%;overflow: auto;"
-			>
-				{#each datas as data}
-					<option class="card">{data.name}</option>
-				{/each}
-			</select>
+		<select
+			class="select"
+			bind:value={selectedData}
+			on:change={() => hdlDataClick()}
+			style="width: 100%;overflow: auto;"
+		>
+			{#each datas as data}
+				<option class="card">{data.name}</option>
+			{/each}
+		</select>
 		<!-- {/if} -->
 	</div>
 {/if}
@@ -201,7 +204,7 @@
 		padding-bottom: 2px;
 		outline: none;
 	}
-	
+
 	.filtrar2 {
 		padding-top: 20px;
 	}
@@ -213,7 +216,7 @@
 	h4 {
 		font-size: 20px;
 	}
- 
+
 	/* .dropDownOppenner {
 		background-color: cadetblue;
 		width: 100%;

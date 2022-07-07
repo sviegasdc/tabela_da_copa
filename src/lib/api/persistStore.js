@@ -1,4 +1,4 @@
-import { writable } from 'svelte/store'
+import { writable } from 'svelte/store';
 
 // export const persistStore = (key, initial) => {
 //     const persist = localStorage.getItem(key)
@@ -13,13 +13,13 @@ import { writable } from 'svelte/store'
 // }
 
 export function persistStorage(key, value) {
-    localStorage.setItem(key, value);
+	localStorage.setItem(key, value);
 }
 
 export function getStorage(key) {
-    return localStorage.getItem(key);
+	return localStorage.getItem(key);
 }
 
 export function storageExists(key) {
-    return localStorage.getItem(key) != null
+	return localStorage.getItem(key) != null;
 }

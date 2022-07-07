@@ -50,9 +50,9 @@
 	<div class="layout-header">
 		<div class="menu">
 			<SideMenu
-				on:stadiumSelect={(e) => console.log(hdlStadiumFilter(e.detail))}
-				on:teamSelect={(e) => console.log(hdlTeamFilter(e.detail))}
-				on:dataSelect={(e) => console.log(hdlDataFilter(e.detail))}
+				on:stadiumSelect={(e) => hdlStadiumFilter(e.detail)}
+				on:teamSelect={(e) => hdlTeamFilter(e.detail)}
+				on:dataSelect={(e) => hdlDataFilter(e.detail)}
 			/>
 		</div>
 		<div class="logo">

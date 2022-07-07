@@ -57,14 +57,13 @@
 			<SideMenu />
 		</div>  -->
 		<div class="menu">
-			<a href="/"> 
+			<a href="/">
 				<img
 					src="https://raw.githubusercontent.com/ArnoldSGR/icons_tabela_da_copa/484ed665d074d77a64244452be9cc9a5b0f619f2/btn-voltar.svg"
 					alt="Botão de voltar"
 					width="80px"
 					height="80px"
 				/>
-				
 			</a>
 		</div>
 		<div class="logo">
@@ -88,7 +87,7 @@
 		<GroupCard bind:grupo={grupoG} title="GRUPO G" />
 		<GroupCard bind:grupo={grupoH} title="GRUPO H" />
 	</div>
-</div> 
+</div>
 
 <style>
 	.main {

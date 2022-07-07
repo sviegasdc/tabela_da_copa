@@ -17,7 +17,7 @@
 	// export let tipoJogo = 'final';
 	const nomeStadiumformat = () => {
 		let str = local.toLocaleLowerCase();
-		return console.log('str',str.replace(/\s+/g, ''));
+		return console.log('str', str.replace(/\s+/g, ''));
 	};
 	nomeStadiumformat();
 	const saveGoals = () => {
@@ -64,21 +64,11 @@
 	<div class="card-content">
 		<div class="ranking">
 			<span class="rank-value">
-				<input
-					on:blur={saveGoals}
-					bind:value={golsP1}
-					class="goal-input"
-					placeholder="0"
-				/>
+				<input on:blur={saveGoals} bind:value={golsP1} class="goal-input" placeholder="0" />
 			</span>
 			<span class="rank-value"> : </span>
 			<span class="rank-value">
-				<input
-					on:blur={saveGoals}
-					bind:value={golsP2}
-					class="goal-input"
-					placeholder="0"
-				/>
+				<input on:blur={saveGoals} bind:value={golsP2} class="goal-input" placeholder="0" />
 			</span>
 		</div>
 	</div>

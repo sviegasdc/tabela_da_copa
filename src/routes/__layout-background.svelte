@@ -3,7 +3,7 @@
 </script>
 
 <div class="main">
-	 <div class="layout-header">
+	<div class="layout-header">
 		<!--<div class="menu">
 			<SideMenu />
 
@@ -11,14 +11,14 @@
 
 		</div> -->
 		<div class="menu">
-				<a href="/"> 
-					<img
-						src="https://raw.githubusercontent.com/ArnoldSGR/icons_tabela_da_copa/484ed665d074d77a64244452be9cc9a5b0f619f2/btn-voltar.svg"
-						alt="Botão de voltar"
-						width="80px"
-						height="80px"
-					/>
-				</a>
+			<a href="/">
+				<img
+					src="https://raw.githubusercontent.com/ArnoldSGR/icons_tabela_da_copa/484ed665d074d77a64244452be9cc9a5b0f619f2/btn-voltar.svg"
+					alt="Botão de voltar"
+					width="80px"
+					height="80px"
+				/>
+			</a>
 		</div>
 
 		<div class="logo">
@@ -39,7 +39,7 @@
 	.main {
 		height: 100vh;
 		max-width: 100%;
-		background-color: rgb(126, 20, 44);
+		background-color: #7e142c;
 		background-image: url(https://raw.githubusercontent.com/ArnoldSGR/icons_tabela_da_copa/17a5af46055b5fc69fbbd8a4a8d868e1011e13e2/bg.svg);
 		background-repeat: no-repeat;
 		background-position: center center;
@@ -120,5 +120,4 @@
 			margin-left: 70px;
 		}
 	}
-	
 </style>
