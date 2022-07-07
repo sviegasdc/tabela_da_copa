@@ -27,9 +27,10 @@
             "type": "image"
         }
     ],
-    "start_url": "/index.html",
+    "start_url": "/",
     "display": "standalone",
     "prefer_related_applications": true,
+    "scope": "/",
     "background_color": "#7e142c",
     "theme_color": "#7e142c",
     "description": "Tabela da copa FIFA Qatar 2022"
