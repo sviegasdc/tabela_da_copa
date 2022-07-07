@@ -10,10 +10,11 @@
         "data": "21/11/2022",
         "hora": 7,
         "tipoJogo": "grupo",
+        "localImgName": "allbaytstadium",
         "id": 1
     },
     {
-        "pais1": "Qatar",
+        "pais1": "Catar",
         "abrP1": "qa",
         "pais2": "Equador",
         "abrP2": "ec",
@@ -24,6 +25,7 @@
         "data": "21/11/2022",
         "hora": 13,
         "tipoJogo": "grupo",
+        "localImgName": "allbaytstadium",
         "id": 2
     },
     {
@@ -38,6 +40,7 @@
         "data": "21/11/2022",
         "hora": 10,
         "tipoJogo": "grupo",
+        "localImgName": "khalifainternationalstadium",
         "id": 3
     },
     {
@@ -52,6 +55,7 @@
         "data": "21/11/2022",
         "hora": 16,
         "tipoJogo": "grupo",
+        "localImgName": "ahmadbinalistadium",
         "id": 4
     },
     {
@@ -66,6 +70,7 @@
         "data": "22/11/2022",
         "hora": 7,
         "tipoJogo": "grupo",
+        "localImgName": "lusailstadium",
         "id": 5
     },
     {
@@ -80,6 +85,7 @@
         "data": "22/11/2022",
         "hora": 13,
         "tipoJogo": "grupo",
+        "localImgName": "stadium974",
         "id": 6
     },
     {
@@ -94,6 +100,7 @@
         "data": "22/11/2022",
         "hora": 10,
         "tipoJogo": "grupo",
+        "localImgName": "educationcitystadium",
         "id": 7
     },
     {
@@ -108,6 +115,7 @@
         "data": "22/11/2022",
         "hora": 16,
         "tipoJogo": "grupo",
+        "localImgName": "aljanoubstadium",
         "id": 8
     },
     {
@@ -122,6 +130,7 @@
         "data": "23/11/2022",
         "hora": 10,
         "tipoJogo": "grupo",
+        "localImgName": "khalifainternationalstadium",
         "id": 9
     },
     {
@@ -136,6 +145,7 @@
         "data": "23/11/2022",
         "hora": 13,
         "tipoJogo": "grupo",
+        "localImgName": "althumamastadium",
         "id": 10
     },
     {
@@ -150,6 +160,7 @@
         "data": "23/11/2022",
         "hora": 7,
         "tipoJogo": "grupo",
+        "localImgName": "allbaytstadium",
         "id": 11
     },
     {
@@ -164,6 +175,7 @@
         "data": "23/11/2022",
         "hora": 16,
         "tipoJogo": "grupo",
+        "localImgName": "ahmadbinalistadium",
         "id": 12
     },
     {
@@ -178,6 +190,7 @@
         "data": "24/11/2022",
         "hora": 7,
         "tipoJogo": "grupo",
+        "localImgName": "aljanoubstadium",
         "id": 13
     },
     {
@@ -192,6 +205,7 @@
         "data": "24/11/2022",
         "hora": 16,
         "tipoJogo": "grupo",
+        "localImgName": "lusailstadium",
         "id": 14
     },
     {
@@ -206,6 +220,7 @@
         "data": "24/11/2022",
         "hora": 10,
         "tipoJogo": "grupo",
+        "localImgName": "educationcitystadium",
         "id": 15
     },
     {
@@ -220,10 +235,11 @@
         "data": "24/11/2022",
         "hora": 13,
         "tipoJogo": "grupo",
+        "localImgName": "stadium974",
         "id": 16
     },
     {
-        "pais1": "Qatar",
+        "pais1": "Catar",
         "abrP1": "qa",
         "pais2": "Senegal",
         "abrP2": "sn",
@@ -234,6 +250,7 @@
         "data": "25/11/2022",
         "hora": 10,
         "tipoJogo": "grupo",
+        "localImgName": "althumamastadium",
         "id": 17
     },
     {
@@ -248,6 +265,7 @@
         "data": "25/11/2022",
         "hora": 13,
         "tipoJogo": "grupo",
+        "localImgName": "khalifainternationalstadium",
         "id": 18
     },
     {
@@ -262,6 +280,7 @@
         "data": "25/11/2022",
         "hora": 7,
         "tipoJogo": "grupo",
+        "localImgName": "ahmadbinalistadium",
         "id": 19
     },
     {
@@ -276,6 +295,7 @@
         "data": "25/11/2022",
         "hora": 16,
         "tipoJogo": "grupo",
+        "localImgName": "allbaytstadium",
         "id": 20
     },
     {
@@ -290,6 +310,7 @@
         "data": "26/11/2022",
         "hora": 10,
         "tipoJogo": "grupo",
+        "localImgName": "educationcitystadium",
         "id": 21
     },
     {
@@ -304,6 +325,7 @@
         "data": "26/11/2022",
         "hora": 16,
         "tipoJogo": "grupo",
+        "localImgName": "lusailstadium",
         "id": 22
     },
     {
@@ -318,6 +340,7 @@
         "data": "26/11/2022",
         "hora": 7,
         "tipoJogo": "grupo",
+        "localImgName": "aljanoubstadium",
         "id": 23
     },
     {
@@ -332,6 +355,7 @@
         "data": "26/11/2022",
         "hora": 13,
         "tipoJogo": "grupo",
+        "localImgName": "stadium974",
         "id": 24
     },
     {
@@ -346,6 +370,7 @@
         "data": "27/11/2022",
         "hora": 7,
         "tipoJogo": "grupo",
+        "localImgName": "ahmadbinalistadium",
         "id": 25
     },
     {
@@ -360,6 +385,7 @@
         "data": "27/11/2022",
         "hora": 16,
         "tipoJogo": "grupo",
+        "localImgName": "allbaytstadium",
         "id": 26
     },
     {
@@ -374,6 +400,7 @@
         "data": "27/11/2022",
         "hora": 10,
         "tipoJogo": "grupo",
+        "localImgName": "althumamastadium",
         "id": 27
     },
     {
@@ -388,6 +415,7 @@
         "data": "27/11/2022",
         "hora": 13,
         "tipoJogo": "grupo",
+        "localImgName": "khalifainternationalstadium",
         "id": 28
     },
     {
@@ -402,6 +430,7 @@
         "data": "28/11/2022",
         "hora": 7,
         "tipoJogo": "grupo",
+        "localImgName": "aljanoubstadium",
         "id": 29
     },
     {
@@ -416,6 +445,7 @@
         "data": "28/11/2022",
         "hora": 13,
         "tipoJogo": "grupo",
+        "localImgName": "stadium974",
         "id": 30
     },
     {
@@ -430,6 +460,7 @@
         "data": "28/11/2022",
         "hora": 10,
         "tipoJogo": "grupo",
+        "localImgName": "educationcitystadium",
         "id": 31
     },
     {
@@ -444,6 +475,7 @@
         "data": "28/11/2022",
         "hora": 16,
         "tipoJogo": "grupo",
+        "localImgName": "lusailstadium",
         "id": 32
     },
     {
@@ -458,12 +490,13 @@
         "data": "29/11/2022",
         "hora": 12,
         "tipoJogo": "grupo",
+        "localImgName": "khalifainternationalstadium",
         "id": 33
     },
     {
         "pais1": "Holanda",
         "abrP1": "nl",
-        "pais2": "Qatar",
+        "pais2": "Catar",
         "abrP2": "qa",
         "golsP1": 0,
         "golsP2": 0,
@@ -472,6 +505,7 @@
         "data": "29/11/2022",
         "hora": 12,
         "tipoJogo": "grupo",
+        "localImgName": "allbaytstadium",
         "id": 34
     },
     {
@@ -486,6 +520,7 @@
         "data": "29/11/2022",
         "hora": 16,
         "tipoJogo": "grupo",
+        "localImgName": "althumamastadium",
         "id": 35
     },
     {
@@ -500,6 +535,7 @@
         "data": "29/11/2022",
         "hora": 12,
         "tipoJogo": "grupo",
+        "localImgName": "ahmadbinalistadium",
         "id": 36
     },
     {
@@ -514,6 +550,7 @@
         "data": "30/11/2022",
         "hora": 16,
         "tipoJogo": "grupo",
+        "localImgName": "stadium974",
         "id": 37
     },
     {
@@ -528,6 +565,7 @@
         "data": "30/11/2022",
         "hora": 16,
         "tipoJogo": "grupo",
+        "localImgName": "lusailstadium",
         "id": 38
     },
     {
@@ -542,6 +580,7 @@
         "data": "30/11/2022",
         "hora": 12,
         "tipoJogo": "grupo",
+        "localImgName": "educationcitystadium",
         "id": 39
     },
     {
@@ -556,6 +595,7 @@
         "data": "30/11/2022",
         "hora": 12,
         "tipoJogo": "grupo",
+        "localImgName": "aljanoubstadium",
         "id": 40
     },
     {
@@ -570,6 +610,7 @@
         "data": "01/12/2022",
         "hora": 16,
         "tipoJogo": "grupo",
+        "localImgName": "khalifainternationalstadium",
         "id": 41
     },
     {
@@ -584,6 +625,7 @@
         "data": "01/12/2022",
         "hora": 16,
         "tipoJogo": "grupo",
+        "localImgName": "allbaytstadium",
         "id": 42
     },
     {
@@ -598,6 +640,7 @@
         "data": "01/12/2022",
         "hora": 12,
         "tipoJogo": "grupo",
+        "localImgName": "ahmadbinalistadium",
         "id": 43
     },
     {
@@ -612,6 +655,7 @@
         "data": "01/12/2022",
         "hora": 12,
         "tipoJogo": "grupo",
+        "localImgName": "althumamastadium",
         "id": 44
     },
     {
@@ -626,6 +670,7 @@
         "data": "02/12/2022",
         "hora": 16,
         "tipoJogo": "grupo",
+        "localImgName": "stadium974",
         "id": 45
     },
     {
@@ -640,6 +685,7 @@
         "data": "02/12/2022",
         "hora": 16,
         "tipoJogo": "grupo",
+        "localImgName": "lusailstadium",
         "id": 46
     },
     {
@@ -654,6 +700,7 @@
         "data": "02/12/2022",
         "hora": 16,
         "tipoJogo": "grupo",
+        "localImgName": "educationcitystadium",
         "id": 47
     },
     {
@@ -668,6 +715,7 @@
         "data": "02/12/2022",
         "hora": 12,
         "tipoJogo": "grupo",
+        "localImgName": "aljanoubstadium",
         "id": 48
     }
 ]
