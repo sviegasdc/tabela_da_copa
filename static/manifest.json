@@ -7,9 +7,9 @@
             "type": "image"
         },
         {
-            "src": "512x512.jpg",
+            "src": "512x512.png",
             "sizes": "512x512",
-            "type": "image"
+            "type": "image/png"
         },
         {
             "src": "256x256.jpg",
@@ -29,6 +29,7 @@
     ],
     "start_url": "/",
     "display": "standalone",
+    "prefer_related_applications": true,
     "scope": "/",
     "background_color": "#7e142c",
     "theme_color": "#7e142c",
