@@ -18,7 +18,7 @@
 		{ name: 'Stadium 974' }
 	];
 	let selecoes = [
-		{ name: 'Qatar' },
+		{ name: 'Catar' },
 		{ name: 'Equador' },
 		{ name: 'Senegal' },
 		{ name: 'Holanda' },
