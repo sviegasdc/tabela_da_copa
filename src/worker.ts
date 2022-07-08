@@ -3,11 +3,11 @@ import { build, files, version } from '$service-worker';
 // https://github.com/microsoft/TypeScript/issues/11781 - this is needed for TS and ESLint
 
 /// env serviceworker
-const globalThis = /** @type {unknown} */ (self);
+const globalThis = /** @type {unknown} */ self;
 /// <reference no-default-lib="true"/>
 /// <reference lib="es2020" />
 /// <reference lib="WebWorker" />
-const sw = /** @type {ServiceWorkerGlobalScope & typeof globalThis} */ (globalThis);
+const sw = /** @type {ServiceWorkerGlobalScope & typeof globalThis} */ globalThis;
 
 const ASSETS = `cache${version}`;
 
@@ -18,29 +18,28 @@ const staticAssets = new Set(to_cache);
 
 /** @param {ExtendableEvent} event */
 function install_listener(event) {
-    event.waitUntil(
-        caches
-        .open(ASSETS)
-        .then((cache) => cache.addAll(to_cache))
-        .then(() => {
-            sw.skipWaiting();
-        })
-    );
+	event.waitUntil(
+		caches
+			.open(ASSETS)
+			.then((cache) => cache.addAll(to_cache))
+			.then(() => {
+				sw.skipWaiting();
+			})
+	);
 }
 
 /** @param {ExtendableEvent} event */
 function activate_listener(event) {
-    event.waitUntil(
-        caches.keys().then(async(keys) => {
-            // delete old caches
-            for (const key of keys) {
-                if (key !== ASSETS)
-                    await caches.delete(key);
-            }
+	event.waitUntil(
+		caches.keys().then(async (keys) => {
+			// delete old caches
+			for (const key of keys) {
+				if (key !== ASSETS) await caches.delete(key);
+			}
 
-            sw.clients.claim();
-        })
-    );
+			sw.clients.claim();
+		})
+	);
 }
 
 /**
@@ -49,52 +48,51 @@ function activate_listener(event) {
  * @param {RequestInfo} request
  */
 async function fetchAndCache(request) {
-    const cache = await caches.open(`offline${version}`);
+	const cache = await caches.open(`offline${version}`);
 
-    try {
-        const response = await fetch(request);
-        cache.put(request, response.clone());
-        return response;
-    } catch (err) {
-        const response = await cache.match(request);
-        if (response) return response;
+	try {
+		const response = await fetch(request);
+		cache.put(request, response.clone());
+		return response;
+	} catch (err) {
+		const response = await cache.match(request);
+		if (response) return response;
 
-        throw err;
-    }
+		throw err;
+	}
 }
 
 /** @param {FetchEvent} event */
 function fetch_listener(event) {
-    if (event.request.method !== 'GET' || event.request.headers.has('range'))
-        return;
+	if (event.request.method !== 'GET' || event.request.headers.has('range')) return;
 
-    const url = new URL(event.request.url);
+	const url = new URL(event.request.url);
 
-    // don't try to handle e.g. data: URIs
-    const isHttp = url.protocol.startsWith('http');
-    const isDevServerRequest = url.hostname === sw.location.hostname && url.port !== sw.location.port;
-    const isStaticAsset = url.host === sw.location.host && staticAssets.has(url.pathname);
-    const skipBecauseUncached = event.request.cache === 'only-if-cached' && !isStaticAsset;
+	// don't try to handle e.g. data: URIs
+	const isHttp = url.protocol.startsWith('http');
+	const isDevServerRequest = url.hostname === sw.location.hostname && url.port !== sw.location.port;
+	const isStaticAsset = url.host === sw.location.host && staticAssets.has(url.pathname);
+	const skipBecauseUncached = event.request.cache === 'only-if-cached' && !isStaticAsset;
 
-    if (isHttp && !isDevServerRequest && !skipBecauseUncached) {
-        event.respondWith(
-            (async() => {
-                // always serve static files and bundler-generated assets from cache.
-                // if your application has other URLs with data that will never change,
-                // set this variable to true for them and they will only be fetched once.
-                const cachedAsset = isStaticAsset && (await caches.match(event.request));
+	if (isHttp && !isDevServerRequest && !skipBecauseUncached) {
+		event.respondWith(
+			(async () => {
+				// always serve static files and bundler-generated assets from cache.
+				// if your application has other URLs with data that will never change,
+				// set this variable to true for them and they will only be fetched once.
+				const cachedAsset = isStaticAsset && (await caches.match(event.request));
 
-                // for pages, you might want to serve a build `service-worker-index.html` file.
-                // It's not right for every app, but if it's right for yours then uncomment this section
-                /*
+				// for pages, you might want to serve a build `service-worker-index.html` file.
+				// It's not right for every app, but if it's right for yours then uncomment this section
+				/*
                 if (!cachedAsset && url.origin === sw.origin && routes.find(route => route.pattern.test(url.pathname))) {
                 	return caches.match('/service-worker-index.html');
                 }
                 */
-                return cachedAsset || fetchAndCache(event.request);
-            })()
-        );
-    }
+				return cachedAsset || fetchAndCache(event.request);
+			})()
+		);
+	}
 }
 
 // prettier-ignore
