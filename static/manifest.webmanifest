@@ -1,6 +1,6 @@
 {
-    "name": "Tabela Qatar 2022",
     "short_name": "Tabela da copa",
+    "name": "Tabela Qatar 2022",
     "icons": [{
             "src": "windows11/SmallTile.scale-100.png",
             "sizes": "71x71"
@@ -451,10 +451,9 @@
         }
     ],
     "start_url": "/",
-    "display": "standalone",
-    "prefer_related_applications": true,
     "scope": "/",
-    "background_color": "#7e142c",
+    "display": "standalone",
     "theme_color": "#7e142c",
+    "background_color": "#7e142c",
     "description": "Tabela da copa FIFA Qatar 2022"
 }
